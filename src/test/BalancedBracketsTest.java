@@ -9,6 +9,11 @@ import static org.junit.Assert.*;
 public class BalancedBracketsTest {
 
     @Test
+    public void emptyTest() {
+        assertEquals(true, BalancedBrackets.hasBalancedBrackets("[]"));
+    }
+
+    @Test
     public void balancedBrackets_emptyString_returnsTrue() {
         assertEquals(true, BalancedBrackets.hasBalancedBrackets(""));
     }

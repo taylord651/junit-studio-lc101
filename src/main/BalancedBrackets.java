@@ -26,14 +26,19 @@ public class BalancedBrackets {
         for (char ch : str.toCharArray()) {
             if (brackets >= 0) {
                 if (ch == '[') {
-                    brackets++;
+                    brackets ++;
                 } else if (ch == ']') {
-                    brackets--;
+                    brackets --;
                 }
+            } else {
+                return false;
             }
+
             }
         return brackets == 0;
     }
+
+
 
     public static void main(String[] args) {
         System.out.println(hasBalancedBrackets("]["));
